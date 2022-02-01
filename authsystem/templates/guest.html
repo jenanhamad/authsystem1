@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>صفحة الضيف</title>
+</head>
+<body>
+<h1>
+  مرحبا {{ user.username }}
+    <br>
+    لقد قمت بتسجيل دخولك كضيف
+</h1>
+<a href="{% url 'logout' %}">سجل خروجك</a>
+<a href="{% url 'profile' %}">الصفجة الشخصيه</a>
+
+</body>
+</html>

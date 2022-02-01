@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from .forms import SignUpForm, LoginForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login ,logout
+from django.contrib.auth.decorators import login_required
+
+
 # Create your views here.
 
 
@@ -31,29 +34,33 @@ def login_view(request):
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(username=username, password=password)
-            if user is not None and user.is_admin:
+            if user is not None and user.is_host:
                 login(request, user)
-                return redirect('adminpage')
-            elif user is not None and user.is_customer:
+                return redirect('hostpage')
+            elif user is not None and user.is_guest:
                 login(request, user)
-                return redirect('customer')
-            elif user is not None and user.is_employee:
-                login(request, user)
-                return redirect('employee')
+                return redirect('guest')
             else:
                 msg= 'invalid credentials'
         else:
             msg = 'error validating form'
     return render(request, 'login.html', {'form': form, 'msg': msg})
 
-
-def admin(request):
-    return render(request,'admin.html')
-
-
-def customer(request):
-    return render(request,'customer.html')
+def logout_view(request):
+    if request.method == "POST":
+        logout(request)
+        return redirect("/login/")
+    return render(request, "logout.html", {})
 
 
-def employee(request):
-    return render(request,'employee.html')
+@login_required()
+def host(request):
+    return render(request,'host.html')
+
+@login_required()
+def guest(request):
+    return render(request,'guest.html')
+
+@login_required()
+def profile(request):
+    return render(request, 'profile.html')
