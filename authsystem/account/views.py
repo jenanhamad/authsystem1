@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from .forms import SignUpForm, LoginForm
 from django.contrib.auth import authenticate, login ,logout
 from django.contrib.auth.decorators import login_required
-
+from .decorators import unauthenticated_user , allowed_users,host_only
+from django.contrib.auth.models import Group
 
 # Create your views here.
 
@@ -10,6 +11,8 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'index.html')
 
+def homepage(request):
+    return render(request, 'homepage.html')
 
 def register(request):
     msg = None
@@ -18,6 +21,8 @@ def register(request):
         if form.is_valid():
             user = form.save()
             msg = 'user created'
+            group = Group.objects.get(name='guest')
+            user.groups.add(group)
             return redirect('login_view')
         else:
             msg = 'form is not valid'
@@ -36,7 +41,7 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None and user.is_host:
                 login(request, user)
-                return redirect('hostpage')
+                return redirect('host')
             elif user is not None and user.is_guest:
                 login(request, user)
                 return redirect('guest')
@@ -54,13 +59,17 @@ def logout_view(request):
 
 
 @login_required()
+@allowed_users(allowed_roles=['host'])
+@host_only
 def host(request):
     return render(request,'host.html')
 
 @login_required()
+@allowed_users(allowed_roles=['guest'])
 def guest(request):
     return render(request,'guest.html')
 
 @login_required()
+@allowed_users(allowed_roles=['guest','host'])
 def profile(request):
     return render(request, 'profile.html')
