@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4605ff48-532e-46b7-a424-f3d629ecec20" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../survey/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../survey/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../survey/templates/_base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../survey/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../survey/templates/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../survey/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../survey/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../survey/templates/options.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../survey/templates/question.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../survey/templates/start.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../survey/templates/submit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../survey/templates/thanks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../templates/logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/../account/decorators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../account/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../polls/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../survey/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../polls/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../polls/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../polls/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../polls/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../polls/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../polls/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../polls/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../polls/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../polls/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/host.html" beforeDir="false" afterPath="$PROJECT_DIR$/../templates/host.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="256kuagvkqEY1dvDH0mLrma40Z5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4605ff48-532e-46b7-a424-f3d629ecec20" name="Changes" comment="" />
+      <created>1644855149979</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644855149979</updated>
+    </task>
+    <servers />
+  </component>
+</project>

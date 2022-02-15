@@ -21,8 +21,12 @@ def register(request):
         if form.is_valid():
             user = form.save()
             msg = 'user created'
-            group = Group.objects.get(name='guest')
-            user.groups.add(group)
+            if user is not None and user.is_host:
+                group = Group.objects.get(name='host')
+                user.groups.add(group)
+            elif user is not None and user.is_guest:
+                group = Group.objects.get(name='guest')
+                user.groups.add(group)
             return redirect('login_view')
         else:
             msg = 'form is not valid'

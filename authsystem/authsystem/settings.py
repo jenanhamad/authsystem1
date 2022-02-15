@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account.apps.AccountConfig',
-    'polls.apps.PollsConfig',
+    'survey.apps.SurveyConfig',
 
 ]
 
